@@ -1,0 +1,214 @@
+z<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Crime News</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #1e1e2f;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background: #29293d;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff5c5c;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 20px;
+    }
+    .main-news {
+      flex: 3;
+      min-width: 60%;
+    }
+    .news-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+    .news-card h2 {
+      margin-top: 0;
+      color: #c62828;
+    }
+    .news-card .category {
+      display: inline-block;
+      background: #c62828;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+    .news-card p {
+      line-height: 1.6;
+    }
+    .sidebar {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .sidebar h3 {
+      margin-top: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .sidebar li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    footer {
+      background: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #ff5c5c;
+      text-decoration: underline;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cyber Crime Today</h1>
+    <p>Real stories, real threats – stay alert in the digital world.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Ransomware</a>
+    <a href="#">Scams</a>
+    <a href="#">Fraud</a>
+    <a href="#">Security Tips</a>
+    <a href="#">Cyber Laws</a>
+  </nav>
+
+  <div class="container">
+    <div class="main-news">
+
+      <div class="news-card">
+        <div class="category">Ransomware</div>
+        <h2>🔒 Indian Bank Systems Hit by Massive Ransomware Attack</h2>
+        <p>
+          A leading private sector bank in India became the victim of a major ransomware attack that shut down online transactions for 8 hours. Cybersecurity teams suspect the LockBit gang was involved. Customer data including account info, transaction logs, and emails may have been exposed.
+        </p>
+        <p>
+          The attackers demanded ₹10 crore in cryptocurrency to restore access. CERT-In and national cyber police are jointly investigating. Experts warn this could lead to stronger data protection laws.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Phishing</div>
+        <h2>📧 New Phishing Scam Steals Bank OTP via Fake RBI Emails</h2>
+        <p>
+          Hackers are impersonating RBI officials and sending emails claiming your account is under review. The fake email contains a link that asks users to verify their phone number and OTP. Many people across Maharashtra and Gujarat have lost funds.
+        </p>
+        <p>
+          Always check the sender's email ID and avoid clicking links in unsolicited emails. Report such cases immediately at cybercrime.gov.in.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Fraud</div>
+        <h2>🧑‍💻 17-Year-Old From Surat Caught Stealing ₹25 Lakh Through UPI Fraud</h2>
+        <p>
+          A teenager created fake KYC documents and registered SIM cards to create fake UPI IDs. Using phishing links sent via WhatsApp, he tricked users into transferring money directly to wallets under his control. He was caught using IP tracing techniques.
+        </p>
+        <p>
+          The incident has raised concerns about youth cyber awareness. Police encourage parents to monitor online activities and educate teens about digital ethics.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Data Breach</div>
+        <h2>💾 Data of 1.5 Million Users Leaked from E-Commerce Platform</h2>
+        <p>
+          A major Indian e-commerce platform has suffered a serious data breach, exposing names, phone numbers, addresses, and partial card data of over 1.5 million users. The breach reportedly originated from a compromised vendor API.
+        </p>
+        <p>
+          The company has initiated a forensic investigation and notified affected users. CERT-In has also issued an advisory. Experts recommend users update passwords and monitor suspicious activity on bank accounts.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Social Media Scam</div>
+        <h2>📱 Instagram Scam Clones Influencer Profiles for Fraud</h2>
+        <p>
+          Dozens of influencers have reported fake Instagram accounts mimicking their identity and messaging followers for money. These scams claim to offer investments or giveaways and often succeed in tricking followers.
+        </p>
+        <p>
+          Users should verify accounts through the blue checkmark and avoid DMs asking for money. Instagram has been urged to strengthen its verification system.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <h3>Cyber Crime Categories</h3>
+      <ul>
+        <li>Ransomware Attacks</li>
+        <li>Phishing Emails</li>
+        <li>UPI & Banking Fraud</li>
+        <li>Data Breaches</li>
+        <li>Identity Theft</li>
+        <li>Social Media Scams</li>
+        <li>Cyber Law Updates</li>
+        <li>Safety & Prevention</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CyberCrimeToday.in | All Rights Reserved | Report Cyber Crimes: <a href="https://cybercrime.gov.in" target="_blank">cybercrime.gov.in</a></p>
+  </footer>
+
+</body>
+</html>
