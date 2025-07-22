@@ -1,111 +1,132 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cyber Crime News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a1024;
+      color: #ffffff;
+      line-height: 1.6;
     }
+
     header {
-      background: #1e1e2f;
-      color: white;
-      padding: 1.5rem;
+      background: linear-gradient(90deg, #08142e, #0d1b3d);
+      padding: 20px;
       text-align: center;
+      color: #00f2c3;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
+
     nav {
-      background: #29293d;
+      background: #0f172a;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 1rem;
     }
+
     nav a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #ff5c5c;
+      color: #00f2c3;
     }
+
     .container {
       display: flex;
       flex-wrap: wrap;
-      margin: 20px;
-      gap: 20px;
+      padding: 30px;
+      gap: 25px;
     }
+
     .main-news {
       flex: 3;
       min-width: 60%;
     }
+
     .news-card {
-      background: white;
+      background-color: #152a4f;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 16px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .news-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
+
     .news-card h2 {
+      color: #00f2c3;
       margin-top: 0;
-      color: #c62828;
     }
+
     .news-card .category {
       display: inline-block;
-      background: #c62828;
-      color: white;
-      padding: 4px 10px;
+      background: #4facfe;
+      color: #0f172a;
+      padding: 4px 12px;
       border-radius: 20px;
       font-size: 0.8rem;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-weight: bold;
     }
+
     .news-card p {
-      line-height: 1.6;
+      color: #d1e7f2;
     }
+
     .sidebar {
       flex: 1;
       min-width: 250px;
-      background: white;
+      background-color: #152a4f;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
     }
+
     .sidebar h3 {
-      margin-top: 0;
+      color: #00f2c3;
     }
+
     .sidebar ul {
       list-style: none;
       padding-left: 0;
     }
+
     .sidebar li {
       padding: 8px 0;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #223a5f;
+      color: #d1e7f2;
     }
+
     footer {
-      background: #1e1e2f;
-      color: white;
+      background: linear-gradient(to right, #08142e, #0d1b3d);
+      color: #cbd5e1;
+      padding: 30px;
       text-align: center;
-      padding: 1.5rem;
-      margin-top: 20px;
     }
+
     footer a {
-      color: #ff5c5c;
+      color: #4facfe;
       text-decoration: underline;
     }
+
     footer a:hover {
-      color: #fff;
+      color: #00f2c3;
     }
 
     @media (max-width: 768px) {
@@ -116,27 +137,17 @@ z<!DOCTYPE html>
   </style>
 </head>
 <body>
-
   <header>
     <h1>Cyber Crime Today</h1>
     <p>Real stories, real threats – stay alert in the digital world.</p>
   </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Ransomware</a>
-    <a href="#">Scams</a>
-    <a href="#">Fraud</a>
-    <a href="#">Security Tips</a>
-    <a href="#">Cyber Laws</a>
-  </nav>
-
+  
   <div class="container">
     <div class="main-news">
 
       <div class="news-card">
         <div class="category">Ransomware</div>
-        <h2>🔒 Indian Bank Systems Hit by Massive Ransomware Attack</h2>
+        <h2>🔐 Indian Bank Systems Hit by Massive Ransomware Attack</h2>
         <p>
           A leading private sector bank in India became the victim of a major ransomware attack that shut down online transactions for 8 hours. Cybersecurity teams suspect the LockBit gang was involved. Customer data including account info, transaction logs, and emails may have been exposed.
         </p>
@@ -169,7 +180,7 @@ z<!DOCTYPE html>
 
       <div class="news-card">
         <div class="category">Data Breach</div>
-        <h2>💾 Data of 1.5 Million Users Leaked from E-Commerce Platform</h2>
+        <h2>📀 Data of 1.5 Million Users Leaked from E-Commerce Platform</h2>
         <p>
           A major Indian e-commerce platform has suffered a serious data breach, exposing names, phone numbers, addresses, and partial card data of over 1.5 million users. The breach reportedly originated from a compromised vendor API.
         </p>
@@ -186,6 +197,61 @@ z<!DOCTYPE html>
         </p>
         <p>
           Users should verify accounts through the blue checkmark and avoid DMs asking for money. Instagram has been urged to strengthen its verification system.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Identity Theft</div>
+        <h2>🕵️ Bengaluru Man’s Aadhaar Misused for SIM Fraud</h2>
+        <p>
+          A tech professional in Bengaluru was shocked to find five SIM cards issued using his Aadhaar without his knowledge. The fraudsters used those SIMs to perform illegal bank transactions.
+        </p>
+        <p>
+          Authorities advise users to lock their Aadhaar biometrics online through UIDAI portal to prevent identity misuse.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Cyber Law Updates</div>
+        <h2>⚖️ India Proposes Amendments to IT Act for Stronger Data Protection</h2>
+        <p>
+          The Ministry of Electronics and IT (MeitY) has proposed a new bill that mandates stricter penalties for data breaches, and better consumer rights related to digital services.
+        </p>
+        <p>
+          Legal experts say the bill aligns India with global data protection norms like GDPR and could be passed in the monsoon session.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Safety & Prevention</div>
+        <h2>🛡️ Government Launches 'Cyber Swachhta Abhiyan' Awareness Campaign</h2>
+        <p>
+          A new nationwide awareness drive, Cyber Swachhta Abhiyan, educates citizens on securing devices, recognizing phishing, and using strong passwords. Free toolkits are available online.
+        </p>
+        <p>
+          Schools and colleges are being encouraged to host digital safety sessions in collaboration with CERT-In.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Phishing</div>
+        <h2>🎣 WhatsApp “Job Offer” Scam Dupes Users into Trading Apps</h2>
+        <p>
+          Fraudsters are sending fake job offers via WhatsApp with links to investment apps. These apps collect personal data and request deposits. Over ₹2 crore lost in the last month alone.
+        </p>
+        <p>
+          Experts warn never to install unknown apps from links and always verify company domains.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <div class="category">Cyber Law Updates</div>
+        <h2>📚 Digital India Act Set to Replace Outdated IT Act, 2000</h2>
+        <p>
+          The new Digital India Act is expected to bring comprehensive reforms including platform accountability, child protection, and faster grievance redressal. Public consultations have begun.
+        </p>
+        <p>
+          The move comes in light of increasing digital threats and rapid tech adoption in India.
         </p>
       </div>
 
@@ -209,6 +275,5 @@ z<!DOCTYPE html>
   <footer>
     <p>&copy; 2025 CyberCrimeToday.in | All Rights Reserved | Report Cyber Crimes: <a href="https://cybercrime.gov.in" target="_blank">cybercrime.gov.in</a></p>
   </footer>
-
 </body>
 </html>
