@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cyber Attacks | CyberShield</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a1024;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #08142e;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-section img {
+      height: 36px;
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #00d1b2;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #00d1b2;
+    }
+
+    .more-dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      background-color: #12223d;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    .more-dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #1f2f4a;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-buttons button {
+      padding: 7px 15px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      background-color: #00d1b2;
+      color: white;
+    }
+
+    .signup-btn {
+      background-color: transparent;
+      color: #00d1b2;
+      border: 2px solid #00d1b2;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-top: 40px;
+      color: #00d1b2;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: #d1e7f2;
+      margin-bottom: 30px;
+      margin-top: 15px;
+      font-size: 18px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .attacks-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .attack-card {
+      background-color: #12223d;
+      border-radius: 12px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.18);
+      padding: 22px 18px;
+      width: 320px;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .attack-card:hover {
+      transform: scale(1.03) translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 209, 178, 0.15);
+    }
+    .attack-card h3 {
+      color: #00d1b2;
+      font-size: 22px;
+      margin-bottom: 8px;
+      margin-top: 0;
+    }
+    .attack-card .attack-type-tag {
+      background-color: #08142e;
+      color: #00d1b2;
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+    }
+    .attack-card p {
+      color: #d1e7f2;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .attack-card .learn-more-btn {
+      background-color: #00d1b2;
+      color: #0f172a;
+      border: none;
+      border-radius: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 15px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.15s;
+    }
+    .attack-card .learn-more-btn:hover {
+      background-color: #00bfa3;
+    }
+
+    .interactive-tips {
+      background: linear-gradient(90deg, #00d1b2 0%, #1f2f4a 100%);
+      color: #fff;
+      padding: 25px 15px;
+      border-radius: 10px;
+      margin: 40px auto 30px auto;
+      max-width: 750px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.10);
+    }
+    .interactive-tips h4 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #0a1024;
+    }
+    .interactive-tips ul {
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    .interactive-tips li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: #08142e;
+      color: #cbd5e1;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer h3 {
+      color: #00d1b2;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function showTip(attack) {
+      const tips = {
+        "Malware": "Install trusted antivirus software and keep your system updated.",
+        "Phishing": "Always check sender's email address and avoid clicking unknown links.",
+        "Ransomware": "Backup your data regularly and avoid downloading from suspicious sources.",
+        "Denial-of-Service": "Use firewalls and monitor unusual network traffic.",
+        "Man-in-the-Middle": "Use HTTPS, VPNs, and avoid public Wi-Fi for sensitive tasks.",
+        "SQL Injection": "Use parameterized queries and sanitize user inputs.",
+        "Brute Force": "Enable account lockouts and use strong, unique passwords.",
+        "Password Attacks": "Enable two-factor authentication and avoid password reuse.",
+        "Zero-Day": "Update software immediately when patches are released.",
+        "Social Engineering": "Educate yourself and your team about scams and always verify identities.",
+        "Drive-by Download": "Avoid visiting suspicious websites and keep plugins updated.",
+        "DNS Spoofing": "Use DNSSEC and trusted DNS servers.",
+        "Session Hijacking": "Implement secure cookies and use HTTPS.",
+        "Cross-Site Scripting": "Sanitize user inputs and use Content Security Policy.",
+        "Eavesdropping": "Encrypt communications and use secure channels.",
+        "Supply Chain": "Vet your vendors and monitor for unexpected changes."
+      };
+      alert(tips[attack] || "Stay alert and keep learning about cyber safety!");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="logo.jpg" alt="Logo" />
+      <div class="logo-text">CyberShield</div>
+    </div>
+   
+  </header>
+
+  <div class="page-title">All About Cyber Attacks</div>
+  <div class="section-desc">
+    Get detailed insights into the most common and dangerous cyber attacks. Click on "Quick Tip" for interactive safety advice and learn how to protect yourself and your organization.
+  </div>
+
+  <div class="interactive-tips">
+    <h4>Interactive Tips: How to Stay Safe</h4>
+    <ul>
+      <li>Click <b>Quick Tip</b> on each attack to get instant advice!</li>
+      <li>Hover over attack cards for focus effect.</li>
+      <li>Stay updated with the latest cyber security news and advisories.</li>
+      <li>Educate yourself and your family about online threats.</li>
+    </ul>
+  </div>
+
+  <div class="attacks-list">
+    <!-- Malware -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Malware</span>
+      <h3>Malware Attack</h3>
+      <p>
+        Malware is malicious software designed to damage, disrupt, or gain unauthorized access to systems. Types include viruses, worms, trojans, and spyware.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Malware')">Quick Tip</button>
+    </div>
+    <!-- Phishing -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Phishing</span>
+      <h3>Phishing</h3>
+      <p>
+        Cybercriminals trick users into giving away sensitive information using fake emails, websites, or messages that look legitimate.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Phishing')">Quick Tip</button>
+    </div>
+    <!-- Ransomware -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Ransomware</span>
+      <h3>Ransomware</h3>
+      <p>
+        Ransomware encrypts your files and demands payment for their release. Paying the ransom does not guarantee data recovery.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Ransomware')">Quick Tip</button>
+    </div>
+    <!-- DoS/DDoS -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Denial-of-Service</span>
+      <h3>DoS/DDoS Attack</h3>
+      <p>
+        Attackers overload systems or networks, making them inaccessible for legitimate users. DDoS attacks use multiple sources for greater impact.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Denial-of-Service')">Quick Tip</button>
+    </div>
+    <!-- Man-in-the-Middle -->
+    <div class="attack-card">
+      <span class="attack-type-tag">MITM</span>
+      <h3>Man-in-the-Middle (MITM)</h3>
+      <p>
+        The attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Man-in-the-Middle')">Quick Tip</button>
+    </div>
+    <!-- SQL Injection -->
+    <div class="attack-card">
+      <span class="attack-type-tag">SQL Injection</span>
+      <h3>SQL Injection</h3>
+      <p>
+        Malicious SQL code is inserted into a database query, allowing attackers to access or modify data they shouldn't be able to.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('SQL Injection')">Quick Tip</button>
+    </div>
+    <!-- Brute Force -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Brute Force</span>
+      <h3>Brute Force Attack</h3>
+      <p>
+        Automated software is used to guess passwords or encryption keys by trying all possible combinations until the correct one is found.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Brute Force')">Quick Tip</button>
+    </div>
+    <!-- Password Attacks -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Password Attack</span>
+      <h3>Password Attack</h3>
+      <p>
+        Techniques such as credential stuffing, dictionary attacks, and keylogging are used to gain access to user accounts.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Password Attacks')">Quick Tip</button>
+    </div>
+    <!-- Zero-Day -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Zero-Day</span>
+      <h3>Zero-Day Exploit</h3>
+      <p>
+        Attackers exploit unknown vulnerabilities before developers can issue a fix, making these attacks highly dangerous.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Zero-Day')">Quick Tip</button>
+    </div>
+    <!-- Social Engineering -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Social Engineering</span>
+      <h3>Social Engineering</h3>
+      <p>
+        Manipulating people into giving up confidential information by exploiting human psychology rather than technical hacking.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Social Engineering')">Quick Tip</button>
+    </div>
+    <!-- Drive-by Download -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Drive-by Download</span>
+      <h3>Drive-by Download</h3>
+      <p>
+        Unintentional download of malicious software when visiting a compromised website or clicking on a deceptive link.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Drive-by Download')">Quick Tip</button>
+    </div>
+    <!-- DNS Spoofing -->
+    <div class="attack-card">
+      <span class="attack-type-tag">DNS Spoofing</span>
+      <h3>DNS Spoofing</h3>
+      <p>
+        Attackers redirect web traffic by corrupting DNS records, leading users to fake sites without their knowledge.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('DNS Spoofing')">Quick Tip</button>
+    </div>
+    <!-- Session Hijacking -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Session Hijacking</span>
+      <h3>Session Hijacking</h3>
+      <p>
+        The attacker steals a user's session token to gain unauthorized access to their account or sensitive data.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Session Hijacking')">Quick Tip</button>
+    </div>
+    <!-- Cross-Site Scripting -->
+    <div class="attack-card">
+      <span class="attack-type-tag">XSS</span>
+      <h3>Cross-Site Scripting (XSS)</h3>
+      <p>
+        Attackers inject malicious scripts into trusted websites, affecting users who visit those sites.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Cross-Site Scripting')">Quick Tip</button>
+    </div>
+    <!-- Eavesdropping -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Eavesdropping</span>
+      <h3>Eavesdropping Attack</h3>
+      <p>
+        Unauthorized real-time interception of private communication, such as emails or voice calls.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Eavesdropping')">Quick Tip</button>
+    </div>
+    <!-- Supply Chain Attack -->
+    <div class="attack-card">
+      <span class="attack-type-tag">Supply Chain</span>
+      <h3>Supply Chain Attack</h3>
+      <p>
+        Attackers compromise software or hardware providers, infecting their products before they reach end-users.
+      </p>
+      <button class="learn-more-btn" onclick="showTip('Supply Chain')">Quick Tip</button>
+    </div>
+  </div>
+
+  <footer>
+    <h3>About This Website</h3>
+    <p>
+      CyberShield is dedicated to spreading awareness about cyber frauds, scams, and safe digital habits.
+    </p>
+    <p>📧 Contact: support@scamthescammer.in</p>
+  </footer>
+</body>
+</html>
