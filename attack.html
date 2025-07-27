@@ -19,7 +19,7 @@
     }
 
     header {
-      background-color: #08142e;
+      background: linear-gradient(90deg, #08142e, #0d1b3d);
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
@@ -27,6 +27,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
     .logo-section {
@@ -36,31 +37,32 @@
     }
 
     .logo-section img {
-      height: 36px;
+      height: 40px;
+      border-radius: 8px;
     }
 
     .logo-text {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
-      color: #00d1b2;
+      color: #00f2c3;
     }
 
     nav {
       display: flex;
       gap: 25px;
       align-items: center;
+      padding-right: 575px;
     }
 
     nav a {
       text-decoration: none;
       color: #ffffff;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 20px;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #00d1b2;
-    }
+    nav a:hover { color: #00f2c3; }
 
     .more-dropdown {
       position: relative;
@@ -70,51 +72,22 @@
       display: none;
       position: absolute;
       top: 35px;
-      background-color: #12223d;
+      background-color: #142745;
       padding: 10px;
       border-radius: 8px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     }
 
-    .more-dropdown:hover .dropdown-content {
-      display: block;
-    }
-
+    .more-dropdown:hover .dropdown-content { display: block; }
     .dropdown-content a {
       display: block;
-      padding: 8px 12px;
+      padding: 8px 14px;
       text-decoration: none;
       color: white;
+      font-size: 15px;
     }
 
-    .dropdown-content a:hover {
-      background-color: #1f2f4a;
-    }
-
-    .auth-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .auth-buttons button {
-      padding: 7px 15px;
-      border: none;
-      border-radius: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .login-btn {
-      background-color: #00d1b2;
-      color: white;
-    }
-
-    .signup-btn {
-      background-color: transparent;
-      color: #00d1b2;
-      border: 2px solid #00d1b2;
-    }
+    .dropdown-content a:hover { background-color: #1d3557; }
 
     .page-title {
       text-align: center;
@@ -232,6 +205,14 @@
     footer p {
       font-size: 14px;
     }
+
+    @media (max-width: 900px) {
+      nav { padding-right: 0; gap: 18px; }
+    }
+    @media (max-width: 600px) {
+      nav { padding-right: 0; gap: 10px;}
+      .logo-text { font-size: 18px;}
+    }
   </style>
   <script>
     function showTip(attack) {
@@ -263,7 +244,19 @@
       <img src="logo.jpg" alt="Logo" />
       <div class="logo-text">CyberShield</div>
     </div>
-   
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="scanner.html">Scanner</a>
+      <div class="more-dropdown">
+        <a href="#">More ▼</a>
+        <div class="dropdown-content">
+          <a href="attack.html">Attacks</a>
+          <a href="guide.html">Guide</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <div class="page-title">All About Cyber Attacks</div>
