@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Safety Guide | CyberShield</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0a1024;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #0a1024;
       color: #ffffff;
       line-height: 1.6;
     }
@@ -73,84 +73,77 @@
       font-size: 15px;
     }
     .dropdown-content a:hover { background-color: #1d3557; }
-
-    .guide-section {
-      padding: 60px 20px;
-      background-color: #0f172a;
-      min-height: 70vh;
+    .main-content {
       max-width: 900px;
-      margin: 0 auto;
+      margin: 38px auto;
+      background: #0f172a;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.20);
+      padding: 40px 32px 34px 32px;
+      line-height: 1.7;
     }
-    .guide-section h2 {
+    h2 {
       color: #00f2c3;
-      font-size: 32px;
-      margin-bottom: 18px;
+      margin-top: 1.3em;
+      margin-bottom: .8em;
+      font-size: 2rem;
+      letter-spacing: .5px;
       text-align: center;
     }
-    .guide-section p {
-      text-align: center;
-      color: #cbd5e1;
-      margin-bottom: 38px;
-      font-size: 17px;
+    ul, ol {
+      margin: 0 0 14px 0;
+      padding-left: 22px;
     }
-    .guide-list {
-      background-color: #152a4f;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-      padding: 32px 28px;
-      font-size: 17px;
+    .quick-steps {
+      background: #152a4f;
+      border-left: 5px solid #00f2c3;
+      border-radius: 10px;
+      padding: 18px 22px 10px 22px;
+      margin-bottom: 28px;
+      margin-top: 18px;
       color: #d1e7f2;
-      margin-bottom: 24px;
     }
-    .guide-list h3 {
+    .security-tips {
+      background: #1d2c44;
+      border-left: 5px solid #ffd700;
+      border-radius: 10px;
+      padding: 16px 20px 8px 17px;
+      margin: 22px 0 28px 0;
+      color: #ffe066;
+    }
+    .notice {
+      background: #0e2040;
+      border-left: 5px solid #00f2c3;
+      border-radius: 10px;
+      padding: 13px 18px 7px 18px;
+      font-size: 16px;
+      margin: 12px 0 20px 0;
       color: #00f2c3;
-      margin-bottom: 14px;
-      font-size: 22px;
-    }
-    .guide-list ul {
-      margin-left: 24px;
-      margin-bottom: 18px;
-    }
-    .guide-list li {
-      margin: 10px 0;
-    }
-    .guide-list a {
-      color: #4facfe;
-      text-decoration: underline;
-      transition: color 0.3s;
-    }
-    .guide-list a:hover {
-      color: #00f2c3;
-    }
-    .resources {
-      margin-top: 22px;
+      letter-spacing: .18px;
       text-align: center;
-      color: #d1e7f2;
-      font-size: 15px;
     }
-    .resources a {
-      color: #00f2c3;
-      text-decoration: underline;
-    }
+    a { color: #4facfe; text-decoration: underline; transition: color 0.3s; }
+    a:hover { color: #00f2c3; }
     footer {
-      background: linear-gradient(to right, #08142e, #0d1b3d);
-      color: #cbd5e1;
-      padding: 40px 20px;
+      margin-top: 50px;
+      padding: 26px;
       text-align: center;
+      color: #cbd5e1;
+      font-size: 15px;
+      background: linear-gradient(to right, #08142e, #0d1b3d);
+      border-top: 1px solid #142745;
     }
-    footer h3 {
-      color: #00f2c3;
-      margin-bottom: 12px;
-      font-size: 20px;
-    }
-    footer p { font-size: 14px; line-height: 1.5; }
     @media (max-width: 900px) {
-      nav { padding-right: 10vw; }
-      .guide-section { padding: 30px 5vw; }
+      .main-content { padding: 20px 5vw 16px 5vw; }
+      h2 { font-size: 1.45rem; }
+      nav { padding-right: 0; gap: 18px; }
     }
     @media (max-width: 600px) {
-      nav { padding-right: 0; gap: 8px; }
-      .guide-list { padding: 14px 6px; font-size: 15px; }
+      .main-content { padding: 12px 2vw 10px 2vw; }
+      header .site-title { font-size: 1.25rem; }
+      h2 { font-size: 1.1rem; }
+      nav { padding-right: 0; gap: 10px;}
+      .logo-text { font-size: 18px;}
     }
   </style>
 </head>
@@ -175,24 +168,40 @@
     </nav>
   </header>
 
-  <section class="guide-section">
+  <div class="main-content">
     <h2>Cyber Safety Guide</h2>
-    <p>Your step-by-step guide to staying safe online. Explore the essentials below to protect yourself from cyber threats.</p>
-    <div class="guide-list">
-      <h3>Essential Safety Practices</h3>
-      <ul>
-        <li><strong>Use Strong Passwords:</strong> Create unique passwords with letters, numbers & symbols. Never reuse passwords.</li>
-        <li><strong>Enable Two-Factor Authentication (2FA):</strong> Add an extra layer of security for your accounts.</li>
-        <li><strong>Beware of Phishing:</strong> Never click suspicious links or download unknown attachments.</li>
-        <li><strong>Update Software Regularly:</strong> Always keep your operating system, apps, and antivirus up-to-date.</li>
-        <li><strong>Check URLs Carefully:</strong> Fake websites often mimic real ones. Look for spelling errors and use HTTPS.</li>
-        <li><strong>Protect Personal Information:</strong> Don’t overshare on social media or unknown forms.</li>
-        <li><strong>Secure Your Devices:</strong> Use screen locks and encryption on phones and computers.</li>
-        <li><strong>Be Cautious with Public Wi-Fi:</strong> Avoid accessing sensitive info on open networks.</li>
-        <li><strong>Regularly Backup Important Data:</strong> Use cloud or external drives to keep backups.</li>
-        <li><strong>Report Suspicious Activity:</strong> If you notice anything unusual, report to relevant authorities or your bank.</li>
-      </ul>
-      <h3>Further Reading & Tools</h3>
+    <div class="notice">
+      <b>CyberShield helps you detect &amp; avoid phishing, malware, and evolving online frauds effortlessly.</b>
+    </div>
+    <p style="text-align:center; color:#cbd5e1; font-size:17px;">
+      Your step-by-step guide to staying safe online. Explore the essentials below to protect yourself from cyber threats.
+    </p>
+    <div class="quick-steps">
+      <b>Get Started in 4 Simple Steps:</b>
+      <ol>
+        <li>Paste or upload any suspicious link, file, PDF, or email text using our scanners.</li>
+        <li>Click <b>Scan</b> and wait a few seconds as CyberShield checks for viruses, phishing, fraud, and fake online identities.</li>
+        <li>Review your risk report—see exactly what the threat is, how severe, and what to do next.</li>
+        <li>Follow our recommended steps to block, delete, or report the threat safely.</li>
+      </ol>
+    </div>
+
+    <h2>Essential Safety Practices</h2>
+    <ul>
+      <li><strong>Use Strong Passwords:</strong> Create unique passwords with letters, numbers &amp; symbols. Never reuse passwords.</li>
+      <li><strong>Enable Two-Factor Authentication (2FA):</strong> Add an extra layer of security for your accounts.</li>
+      <li><strong>Beware of Phishing:</strong> Never click suspicious links or download unknown attachments.</li>
+      <li><strong>Update Software Regularly:</strong> Always keep your operating system, apps, and antivirus up-to-date.</li>
+      <li><strong>Check URLs Carefully:</strong> Fake websites often mimic real ones. Look for spelling errors and use HTTPS.</li>
+      <li><strong>Protect Personal Information:</strong> Don’t overshare on social media or unknown forms.</li>
+      <li><strong>Secure Your Devices:</strong> Use screen locks and encryption on phones and computers.</li>
+      <li><strong>Be Cautious with Public Wi-Fi:</strong> Avoid accessing sensitive info on open networks.</li>
+      <li><strong>Regularly Backup Important Data:</strong> Use cloud or external drives to keep backups.</li>
+      <li><strong>Report Suspicious Activity:</strong> If you notice anything unusual, report to relevant authorities or your bank.</li>
+    </ul>
+
+    <div class="security-tips">
+      <b>Further Reading &amp; Tools:</b>
       <ul>
         <li><a href="https://www.cybershield.in/blog" target="_blank">CyberShield Blog</a></li>
         <li><a href="https://www.cert-in.org.in/" target="_blank">Indian Cyber Emergency Response Team (CERT-In)</a></li>
@@ -200,14 +209,25 @@
         <li><a href="https://www.cisa.gov/resources-tools" target="_blank">US CISA Cyber Resources</a></li>
       </ul>
     </div>
-    <div class="resources">
-      <p>Still have questions? <a href="contact.html">Contact our team</a> for personalized guidance.</p>
+
+    <h2>Protect Yourself &amp; Stay Updated</h2>
+    <ul>
+      <li>Visit our <b>News</b> page for real-world scam alerts and evolving digital risks.</li>
+      <li>Explore our <b>Guides</b> for practical steps and fraud-spotting lessons.</li>
+      <li>Contact our team anytime for help or questions.</li>
+    </ul>
+    <p style="text-align:center;">
+      <b>Stay secure—scan before you trust. Only with CyberShield.in.</b>
+    </p>
+    <div class="notice" style="color:#d1e7f2; background:#152a4f; border-left:5px solid #00f2c3; margin-top:22px;">
+      Still have questions? <a href="contact.html">Contact our team</a> for personalized guidance.<br>
+      📧 Email: <a href="mailto:support@cybershield.in">support@cybershield.in</a>
     </div>
-  </section>
+  </div>
+
   <footer>
-    <h3>About This Website</h3>
-    <p>CyberShield is dedicated to spreading awareness about cyber frauds, scams, and safe digital habits.</p>
-    <p>📧 Contact: support@cybershield.in</p>
+    CyberShield is dedicated to spreading awareness about cyber frauds, scams, and safe digital habits.<br>
+    &copy; 2025 CyberShield.in
   </footer>
 </body>
 </html>
